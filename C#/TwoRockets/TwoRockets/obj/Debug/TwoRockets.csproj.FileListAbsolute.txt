@@ -1,0 +1,7 @@
+C:\Users\ragha\source\repos\TwoRockets\TwoRockets\obj\Debug\TwoRockets.csprojResolveAssemblyReference.cache
+C:\Users\ragha\source\repos\TwoRockets\TwoRockets\obj\Debug\TwoRockets.csproj.CoreCompileInputs.cache
+C:\Users\ragha\source\repos\TwoRockets\TwoRockets\bin\Debug\TwoRockets.exe.config
+C:\Users\ragha\source\repos\TwoRockets\TwoRockets\bin\Debug\TwoRockets.exe
+C:\Users\ragha\source\repos\TwoRockets\TwoRockets\bin\Debug\TwoRockets.pdb
+C:\Users\ragha\source\repos\TwoRockets\TwoRockets\obj\Debug\TwoRockets.exe
+C:\Users\ragha\source\repos\TwoRockets\TwoRockets\obj\Debug\TwoRockets.pdb
