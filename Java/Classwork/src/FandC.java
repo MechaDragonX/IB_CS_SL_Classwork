@@ -23,7 +23,7 @@ public class FandC
 		}
 		else
 		{
-			System.out.println("Please write you rtemperature in the format, \"32F\" or \"100C\".");
+			System.out.println("Please write your temperature in the format, \"32F\" or \"100C\".");
 		}
 	}
 	public static void decideTime(char unit, double num, String input) 
