@@ -5,7 +5,7 @@ public class TypeConvert
 		// print();
 		// alphaIndex();
 		// charCast();
-		caesarShift();
+		System.out.printf("New string: %s", caesarShift("Julius Caesar was assassinated on March 15, 44 BCE."));
 	}
 	public static void print()
 	{
@@ -36,17 +36,18 @@ public class TypeConvert
 		System.out.println(x);
 		System.out.println((char) x);
 	}
-	public static void caesarShift()
+	public static String caesarShift(String caesar)
 	{
-		String caesar = "Julius Caesar was assassinated on March 15, 44 BCE.";
 		char [] julius = caesar.toCharArray();
+		String sjulius = "";
 		
 		System.out.printf("Original string : %s\n", caesar);
 		
 		for (int i = 0; i < julius.length; i++)
 		{
 			julius[i] = (char) (julius[i] +3);
+			sjulius = new String(julius);
 		}
-		System.out.print(julius);
+		return sjulius;
 	}
 }
