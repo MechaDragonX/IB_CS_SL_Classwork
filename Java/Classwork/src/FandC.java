@@ -4,12 +4,17 @@ public class FandC
 {
 	public static void main(String[] args) 
 	{
-		System.out.println("What temperature do you want to convert? PLease write in it this format, \"32F\" or \"100C\".");
-		Scanner sc = new Scanner(System.in);
-		String input = sc.nextLine();
+		String input = input();
 				
 		// String input = "37C";
 		num(input);
+	}
+	public static String input()
+	{
+		System.out.println("What temperature do you want to convert? Please write in it this format, \"32F\" or \"100C\".");
+		Scanner sc = new Scanner(System.in);
+		String input = sc.nextLine();
+		return input;
 	}
 	public static void num(String input) 
 	{
@@ -23,28 +28,28 @@ public class FandC
 		}
 		else
 		{
-			System.out.println("Please write your temperature in the format, \"32F\" or \"100C\".");
+			input();
 		}
 	}
 	public static void decideTime(char unit, double num, String input) 
 	{
 		if (unit == 'F' || unit == 'f')
 		{
-			ftoC(num, input);
+			System.out.println(ftoC(num, input));
 		}
 		else if (unit == 'C' || unit == 'c')
 		{
-			ctoF(num, input);
+			System.out.println(ctoF(num, input));
 		}
 	}
-	public static void ftoC(double num, String input)
+	public static String ftoC(double num, String input)
 	{
 		double val = (num - 32) * (5.0/9.0);
-		System.out.format("%s is %fC", input, val);
+		return input + " is " + val + "C";
 	}
-	public static void ctoF(double num, String input)
+	public static String ctoF(double num, String input)
 	{
 		double val = num * (9.0/5.0) + 32;
-		System.out.format("%s is %fF", input, val);
+		return input + " is " + val+ "F";
 	}
 }

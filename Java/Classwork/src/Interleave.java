@@ -11,7 +11,9 @@ public class Interleave
 //		System.out.println(Array("abcd", "efgh", "ijk")); // Pass
 //		System.out.println(Array("abc", "defg", "hijk")); // Pass
 		
-		input();
+		// input();
+		
+		System.out.println(interleave("abcd", "efg"));
 	}
 		public static void input()
 	{
@@ -95,35 +97,18 @@ public class Interleave
 		}
 		return newstr;
 	}
-	public static String charAt(String s1, String s2, String s3)
+	public static String interleave(String s1, String s2)
 	{
-		int LengthIndex1 = s1.length() - 1; // Final Index, to prevent out of bounds error
-		int LengthIndex2 = s2.length() - 1;
+		StringBuilder s = new StringBuilder();
+		int i;
 		
-		char char1; // char from sx
-		char char2;
-		
-		String newstr = ""; // new string to be built from chars
-		
-		for (int i = 0; i <= LengthIndex1 || i <= LengthIndex2; i++) // Goes until final index of the longest String
+		for (i = 0; i < Math.min(s1.length(), s2.length()); i++)
 		{
-			if (i <= LengthIndex1 && i <= LengthIndex2) // Are the same length?
-			{
-				char1 = s1.charAt(i); // Find the value of (i) for both Strings
-				char2 = s2.charAt(i);
-				newstr += new StringBuilder().append(char1).append(char2).toString(); // Make a new string by combining them
-			}
-			else if (i > LengthIndex1 && i <= LengthIndex2) // Is 1 larger than 2?
-			{
-				char2 = s2.charAt(i); // Find the value of (i) for 2 only
-				newstr += new StringBuilder().append(char2).toString();
-			}
-			else if (i <= LengthIndex1 && i > LengthIndex2) // Is 2 larger than 1?
-			{
-				char1 = s1.charAt(i); // Find the value of (i) 1 only
-				newstr += new StringBuilder().append(char1).toString();
-			}
+			s.append(s1.charAt(i));
+			s.append(s2.charAt(i));
 		}
-		return newstr;
+		s.append(s1.substring(i));
+		s.append(s2.substring(i));
+		return s.toString();
 	}
 }
